@@ -1,101 +1,39 @@
-# Base para hacer tests
+# Import Users Kata
 
-Configuración básica para empezar a hacer una kata o aprender a hacer tests en los siguientes lenguajes:
+> Esta kata está enfocada en refactoring
 
-- PHP y PHPUnit
-- Javascript con Jest
-- Typescript con Deno
-- Java, Junit y Mockito
-- Scala, Munit y Scalacheck
-- Kotlin, JUnit5 y MockK
-- C#, xUnit (con FluentAsertion) y NSubstitute (para mock)
+Tenemos un fichero que se encarga de leer usuarios desde distintas fuentes de origen (csv y red), queremos filtrar
+y mostrar los datos por la consola.
 
-# Configuración específica por lenguaje
+El código es bastante simple, pero se está haciendo más y más complejo, por lo que se está acumulando bastante deuda técnica.
 
-## PHP con PHPUnit
+El objetivo de este refactor consistirá en mejorar el código de manera que sea mantenible en el futuro manteniendo
+el comportamiento inicial.
 
-1. Instalar [composer](https://getcomposer.org/) `curl -sS https://getcomposer.org/installer | php`
-2. `composer install` (estando en la carpeta php)
-3. `./vendor/bin/phpunit`
+## Algunas sugerencias
 
-### 📚 Documentación
-- [PHPUnit](https://phpunit.readthedocs.io/)
-- [Prophecy](https://github.com/phpspec/prophecy) para dobles de prueba
+1. Considera legibilidad y buenas prácticas
+2. Considera test coverage
+3. _[OPCIONAL]_ Reemplaza el output en consola por escritura en fichero/SQLite...
+4. _[OPCIONAL]_ Añade una nueva fuente de origen (fichero txt, XML, base de datos)...
 
-## Javascript con Jest
+# Instrucciones
 
-1. Instalar [Node](http://nodejs.org/)
-2. `npm install` (Estando en la carpeta javascript)
-3. `npm test`
+### PHP
 
-### 📚 Documentación
-- [Jest](https://jestjs.io)
+Entra en la carpeta php y ejecuta `php run.php`
 
-## Typescript con Deno
+### Javascript
 
-1. Instalar [Deno](https://deno.land/#installation)
-2. `deno test` (Estando en la carpeta typescript)
+Entra en la carpeta javascript y ejecuta los siguientes comandos
 
-### 📚 Documentación
-- [Deno](https://deno.land/manual)
-- [BDD module](https://deno.land/manual/testing/behavior_driven_development)
-- [Expect module](https://deno.land/x/expect)
+```javascript
+npm install
+node run.js
+```
 
-## Java con Junit y Mockito
+> Es necesario tener Node version 18 mínimo para tener acceso a la librería `fetch()`
 
-1. Instalar las dependencias y tests con Maven [mvn test]
-2. Ejecutar los tests con el IDE
+### Java (en construcción)
 
-### 📚 Documentación
-- [JUnit](https://github.com/junit-team/junit/wiki)
-- [Mockito](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
-
-## Scala con Munit y Scalacheck
-
-1. `sbt` (en la carpeta scala)
-2. `~test` para ejecutar los test en hot reload
-
-### 📚 Documentación
-- [Munit](https://scalameta.org/munit/docs/tests.html)
-- [Scalacheck](https://github.com/typelevel/scalacheck/blob/main/doc/UserGuide.md) para testing basado en propiedades
-
-### Linux/Mac
-1. Instalar [SDKMan](https://sdkman.io/)
-2. `sdk install java 11.0.12-open` instala OpenJDK
-3. `sdk install sbt` una vez instalado SDKMan
-
-### Windows
-1. Instalar [OpenJDK](https://docs.microsoft.com/es-es/java/openjdk/download#openjdk-110141-lts--see-previous-releases)
-2. Instalar [SBT](https://www.scala-sbt.org/download.html)
-
-### Visual Studio Code
-1. Descargar [Visual Studio Code](https://code.visualstudio.com/)
-2. Instalar para VS Code [Metals](https://scalameta.org/metals/docs/editors/vscode)
-
-## Kotlin con JUnit5 y MockK
-
-1. Por consola: Puedes instalar dependencias y lanzar los tests con `gradlew test`
-2. Usando IDE: Simplemente abre el proyecto desde el raiz de la plantilla Kotlin
-
-### 📚 Documentación
-- [JUnit5](https://junit.org/junit5/)
-- [MockK](https://mockk.io/)
-
-## C# con  xUnit (con FluentAsertion) y NSubstitute (para mock)
-
-1. Instalar Microsoft Visual Studio Community 2022
-2. Abre el proyecto y se descargaran automáticamente los paquetes Nuguet necesarios
-3.
-### 📚 Documentación
-- [xUnit](https://xunit.net/)
-- [NSubstitute](https://nsubstitute.github.io/help.html)
-- [FluentAssertions](https://fluentassertions.com/introduction)
-
-## Python
-1. Instalar python 3.x
-2. Una vez descargado el código fuente dentro de la carpeta */python/ creamos un virtual enviroment:
-3. `python3 -m venv env`
-4. Activamos en virtual environment:
-- windows: `.\env\Scripts\activate.bat`
-- linux/mac: `source env/bin/activate`
-5. `pytest` para ejecutar los tests.
+Instala las dependencias Maven y ejecuta el programa desde el fichero `Main.java`

@@ -8,11 +8,9 @@ var USER_URL = 'https://randomuser.me/api/?inc=gender,name,email,location&result
 // Parse CSV file
 const __filename = fileURLToPath(import.meta.url);
 var getcurrentworkingDirectory = path.dirname(__filename);
-// var getcurrentworkingDirectory = __dirname;
 
 // fields: ID, gender, Name ,country, postcode, email, Birthdate
 var q = fs.readFileSync(
-// var csv_provider = require('fs').readFileSync(
   getcurrentworkingDirectory + '/../users.csv', 'utf8', (err, data) => data.toString().split("\n")
 ).split("\n")
 
@@ -54,10 +52,10 @@ for (let j = 0; j < web_provider.length; j++) {
 }
 
 /**
- * @param $providers [ id -> number,
+ * Shape: providers array[ id -> number,
  *                   email -> string
  *                   first_name -> string
- *                   last_name -> string ] array
+ *                   last_name -> string ]
  */
 var providers = csv_provider.concat(b) // merge arrays
 
@@ -66,7 +64,6 @@ console.log("*******************************************************************
 console.log("* ID\t\t* COUNTRY\t* NAME\t\t* EMAIL\t\t\t\t*")
 console.log("*********************************************************************************")
 for (let j = 0; j < providers.length; j++) {
-  // console.log(sprintf("* %s\t* %s\t* %s\t* %s\t*", $item[0], $item[3], $item[2], $item[5]))
   console.log(`* ${providers[j][0]}\t* ${providers[j][3]}\t* ${providers[j][2]}\t* ${providers[j][5]}\t*`)
 }
 console.log("*********************************************************************************")

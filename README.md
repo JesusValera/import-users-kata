@@ -1,39 +1,53 @@
-# Import Users Kata
+# 👩‍💻 The Import Users Kata
 
-> Esta kata está enfocada en refactoring
+> This is a refactoring kata 🔧
 
-Tenemos un fichero que se encarga de leer usuarios desde distintas fuentes de origen (csv y red), queremos filtrar
-y mostrar los datos por la consola.
+The kata consists on a single file that read information from different sources
+(csv & network), and it must read, parse and print the information on a CLI.
 
-El código es bastante simple, pero se está haciendo más y más complejo, por lo que se está acumulando bastante deuda técnica.
+---
 
-El objetivo de este refactor consistirá en mejorar el código de manera que sea mantenible en el futuro manteniendo
-el comportamiento inicial.
+A college from your company created a simple script that read users,
+unfortunately that person left the company a few months ago, and you need to
+change the functionality, but you find out the current code gets more and more
+tangled over the time. You talked to your boss, and he decided to give you time
+to improve it.
 
-## Algunas sugerencias
+The current code is very basic but no-one feels comfortable or want to modify
+it.
 
-1. Considera legibilidad y buenas prácticas
-2. Considera test coverage
-3. _[OPCIONAL]_ Reemplaza el output en consola por escritura en fichero/SQLite...
-4. _[OPCIONAL]_ Añade una nueva fuente de origen (fichero txt, XML, base de datos)...
+The objective of this kata is to improve the current code but maintaining the
+original behaviour. Consider testing ("black box" and "white box").
 
-# Instrucciones
+## ⏩ Next iteration
 
-### PHP
+Instead of displaying the output through terminal, store the information somewhere else, like a SQLite or a text file
 
-Entra en la carpeta php y ejecuta `php run.php`
+# Instructions
 
-### Javascript
+This kata is available in the following languages:
 
-Entra en la carpeta javascript y ejecuta los siguientes comandos
+### 🐘 PHP
 
-```javascript
+Go to `php` folder and run
+```bash
+php run.php
+```
+
+### ✨ Javascript
+
+Go to `javascript` folder and run
+```bash
 npm install
 node run.js
 ```
 
-> Es necesario tener Node version 18 mínimo para tener acceso a la librería `fetch()`
+> It is required at least `Node 18` to have access to the `fetch()` library
 
-### Java (en construcción)
+### ☕ Java
 
-Instala las dependencias Maven y ejecuta el programa desde el fichero `Main.java`
+Go to `java` folder, install Maven dependencies and run the `Main.java` file.
+
+---
+
+Feel free to send Pull Requests!

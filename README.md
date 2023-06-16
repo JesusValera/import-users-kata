@@ -50,4 +50,15 @@ Go to `java` folder, install Maven dependencies and run the `Main.java` file.
 
 ---
 
+### 🎁 Kotlin
+
+From kotlin folder, run the following gradle commands:
+
+```bash
+gradlew build
+gradlew run
+```
+
+
+
 Feel free to send Pull Requests!

@@ -2,8 +2,7 @@
 
 > This is a refactoring kata 🔧
 
-The kata consists on a single file that read information from different sources
-(csv & network), and it must read, parse and print the information on a CLI.
+The kata consists on reading, parsing & print data from different sources (csv & network).
 
 ---
 
@@ -16,12 +15,15 @@ to improve it.
 The current code is very basic but no-one feels comfortable or want to modify
 it.
 
-The objective of this kata is to improve the current code but maintaining the
-original behaviour. Consider testing ("black box" and "white box").
+- Improve the current code, but maintaining the original behaviour
+- Split logic into different functions/classes if necessary
+- Consider testing ("black-box" & "white-box")
+- Have fun!
 
-## ⏩ Next iteration
+### ⏩ Next iteration
 
-Instead of displaying the output through terminal, store the information somewhere else, like a SQLite or a text file
+Instead of displaying the output through terminal, store the information
+somewhere else, like a text file or a SQLite database.
 
 # Instructions
 
@@ -29,14 +31,16 @@ This kata is available in the following languages:
 
 ### 🐘 PHP
 
-Go to `php` folder and run
+From `php` folder, run:
+
 ```bash
 php run.php
 ```
 
 ### ✨ Javascript
 
-Go to `javascript` folder and run
+From `javascript` folder, run:
+
 ```bash
 npm install
 node run.js
@@ -46,19 +50,17 @@ node run.js
 
 ### ☕ Java
 
-Go to `java` folder, install Maven dependencies and run the `Main.java` file.
+From `java` folder, run:
 
----
+```bash
+mvn compile exec:java -Dexec.mainClass="src.Main"
+```
 
 ### 🎁 Kotlin
 
-From kotlin folder, run the following gradle commands:
+From `kotlin` folder, run:
 
 ```bash
 gradlew build
 gradlew run
 ```
-
-
-
-Feel free to send Pull Requests!

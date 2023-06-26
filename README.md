@@ -64,3 +64,12 @@ From `kotlin` folder, run:
 gradlew build
 gradlew run
 ```
+
+### :snake: Python
+
+From `python` folder, run:
+
+```bash
+python3 main.py
+```
+
